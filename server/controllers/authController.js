@@ -38,6 +38,9 @@ const registerController = async (req, res) => {
 const loginController = async (req, res) => {
   try {
     const user = await userModel.findOne({ email: req.body.email });
+    {
+      console.log('user 😎-', user)
+    }
     if (!user) {
       return res.status(404).send({
         success: false,
@@ -48,7 +51,7 @@ const loginController = async (req, res) => {
     if (user.role !== req.body.role) {
       return res.status(500).send({
         success: false,
-        message: "role dosent match",
+        message: "role dose n't match",
       });
     }
     //compare password

@@ -9,6 +9,7 @@ const OrganisationPage = () => {
   const { user } = useSelector((state) => state.auth);
   const [data, setData] = useState([]);
   //find org records
+  useEffect(() => {
   const getOrg = async () => {
     try {
       if (user?.role === "donar") {
@@ -32,7 +33,6 @@ const OrganisationPage = () => {
     }
   };
 
-  useEffect(() => {
     getOrg();
   }, [user]);
 

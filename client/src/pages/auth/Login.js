@@ -8,12 +8,13 @@ const Login = () => {
   return (
     <>
       {error && <span>{alert(error)}</span>}
+      {console.log('error', error)}
       {loading ? (
         <Spinner />
       ) : (
         <div className="row g-0">
           <div className="col-md-8 form-banner">
-            <img src="./assets/images/banner1.jpg" alt="loginImage" />
+            <img src="./assets/images/b2.jpeg" alt="loginImage" />
           </div>
           <div className="col-md-4 form-container">
             <Form

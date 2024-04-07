@@ -7,27 +7,29 @@ import { useSelector } from "react-redux";
 const Consumer = () => {
   const { user } = useSelector((state) => state.auth);
   const [data, setData] = useState([]);
-  //find donar records
-  const getDonars = async () => {
-    try {
-      const { data } = await API.post("/inventory/get-inventory-hospital", {
-        filters: {
-          inventoryType: "out",
-          hospital: user?._id,
-        },
-      });
-      if (data?.success) {
-        setData(data?.inventory);
-        console.log(data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   useEffect(() => {
-    getDonars();
-  }, []);
+    // Define getDonors function inside the useEffect callback
+    const getDonors = async () => {
+      try {
+        const { data } = await API.post("/inventory/get-inventory-hospital", {
+          filters: {
+            inventoryType: "out",
+            hospital: user?._id,
+          },
+        });
+        if (data?.success) {
+          setData(data?.inventory);
+          console.log(data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    // Call getDonors function
+    getDonors();
+  }, [user]); // Include user in dependency array if needed
 
   return (
     <Layout>
@@ -36,7 +38,7 @@ const Consumer = () => {
           <thead>
             <tr>
               <th scope="col">Blood Group</th>
-              <th scope="col">Inventory TYpe</th>
+              <th scope="col">Inventory Type</th>
               <th scope="col">Quantity</th>
               <th scope="col">Email</th>
               <th scope="col">Date</th>
