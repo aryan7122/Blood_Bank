@@ -13,6 +13,23 @@ const Form = ({ formType, submitBtn, formTitle }) => {
   const [website, setWebsite] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
+  const [age, setAge] = useState("");
+  // const [roles, setRoles] = useState("donar");
+  // const [ages, setAges] = useState("");
+
+  const handleChange = (e) => {
+    setRole(e.target.value);
+    // Reset age on role change
+    setAge("");
+  }
+
+  const handleSubmit = () => {
+    // Check if role is Male and age is less than 18 or Female and age is less than 21
+    if ((role === "donar" && age < 18) || (role === "donar" && age < 21)) {
+      alert("Age must be at least 18 for Male and at least 21 for Female.");
+    } else {
+    }
+  }
   return (
     <div>
       <form
@@ -30,7 +47,8 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               organisationName,
               address,
               hospitalName,
-              website
+              website,
+              age
             );
         }}
       >
@@ -150,6 +168,91 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                       onChange={(e) => setHospitalName(e.target.value)}
                     />
                   )}
+                  {/*  */}
+                  {/* <div className="d-flex ">
+                    <div className="form-check m-1">
+                      <input
+                        type="radio"
+                        className="form-check-input"
+                        name="sex"
+                        id="donarRadio"
+                        value={"donar"}
+                        onChange={(e) => setRole(e.target.value)}
+                        defaultChecked
+                      />
+                      <label htmlFor="adminRadio" className="form-check-label">
+                        Female
+                      </label>
+                    </div>
+                    <div className="form-check m-1">
+                      <input
+                        type="radio"
+                        className="form-check-input"
+                        name="sex"
+                        id="donarRadio"
+                        value={"donar"}
+                        onChange={(e) => setRole(e.target.value)}
+                        defaultChecked
+                      />
+                      <label htmlFor="adminRadio" className="form-check-label">
+                        Male
+                      </label>
+                    </div>
+                 </div>
+                  {role === "donar" &&
+                  <InputType
+                    labelText={"Age"}
+                    labelFor={"forPhone"}
+                    inputType={"text"}
+                    name={"Age"}
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
+                  />
+                  } */}
+                  {/*  */}
+                  <div>
+                    <div className="d-flex">
+                      <div className="form-check m-1">
+                        <input
+                          type="radio"
+                          className="form-check-input"
+                          name="sex"
+                          id="femaleRadio"
+                          value="donar"
+                          onChange={handleChange}
+                          defaultChecked={role === "donar"}
+                        />
+                        <label htmlFor="femaleRadio" className="form-check-label">
+                          Female
+                        </label>
+                      </div>
+                      <div className="form-check m-1">
+                        <input
+                          type="radio"
+                          className="form-check-input"
+                          name="sex"
+                          id="maleRadio"
+                          value="donar"
+                          onChange={handleChange}
+                          defaultChecked={role === "donar"}
+                        />
+                        <label htmlFor="maleRadio" className="form-check-label">
+                          Male
+                        </label>
+                      </div>
+                    </div>
+                    {role === "donar" &&
+                      <InputType
+                        labelText={"Age"}
+                        labelFor={"forAge"}
+                        inputType={"number"}
+                        name={"Age"}
+                        value={age}
+                        onChange={(e) => setAge(e.target.value)}
+                      />
+                    }
+                  </div>
+                  {/*  */}
 
                   <InputType
                     labelText={"email"}
@@ -191,6 +294,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                   />
+                
                 </>
               );
             }
@@ -209,7 +313,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                 <Link to="/login"> Login !</Link>
             </p>
           )}
-          <button className="btn btn-primary" type="submit">
+          <button onClick={handleSubmit} className="btn btn-primary" type="submit">
             {submitBtn}
           </button>
         </div>
