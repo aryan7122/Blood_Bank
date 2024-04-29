@@ -56,12 +56,20 @@
 --------- navbar 
 =================== */
 
-.navbar {
+/* .navbar {
   background-color: black !important;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 .nav-link,
 .navbar-brand {
   background-color: black !important;
   color: white !important;
+} */
+.nav-link,
+.navbar-brand{
+  color: #000;
 }
+
+    .col-md-9 {
+      margin-top: 8%;
+    }

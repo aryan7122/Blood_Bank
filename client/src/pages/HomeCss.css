@@ -1,0 +1,425 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Home_background {
+    background-image: url('../../public/assets/images/b.jpg');
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 40px;
+    position: relative;
+    /* Add this line */
+}
+
+.blur_img {
+    background-color: rgba(0, 0, 0, 0.717);
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 0;
+    left: 0;
+}
+
+.text {
+    padding: 50px;
+    width: 600px;
+    color: #fff;
+    position: relative;
+    top: 30%;
+    /* Adjust this value to center vertically */
+    left: 10%;
+    /* Adjust this value to center horizontally */
+    /* transform: translate(-50%, -50%); */
+    /* Center the text */
+}
+
+.text h1 {
+    font-size: 4rem;
+}
+
+.text p {
+    font-size: 1.3rem;
+}
+
+.text button {
+    border: none;
+    padding: 8px 15px;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 5px 0.1px black;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.text button a {
+    text-decoration: none;
+    color: black;
+}
+
+.text button:hover {
+    box-shadow: 0px 0px 10px 0.3px black;
+}
+
+.quote {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 180px;
+    bottom: 0;
+    background-image: url('../../public/assets/images/ggg.jpg');
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 30px;
+}
+
+.quote div {
+    background-color: rgba(0, 0, 0, 0.878);
+    width: 70%;
+    text-align: end;
+    color: #fff;
+    width: 50%;
+    padding: 20px;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0.2px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.quote h2 {
+    font-size: 2.5rem;
+}
+
+.quote p {
+    font-size: 1.5rem;
+}
+
+/* about */
+
+#about_bg {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../public/assets/images/abouttt.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#about_bg div:hover {
+    background-color: #000000b0;
+}
+
+#about_bg div {
+    background-color: #000000c1;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about_bg div h2,
+h3 {
+    width: 60%;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.about_bg {
+    width: 100%;
+    height: auto;
+}
+
+.about_bg h2 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+.about_bg h3 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.about_bg .about_content2 .img_text_about {
+    flex-direction: row-reverse;
+}
+
+.text22 {
+    padding-left: 0px !important;
+    padding-right: 30px;
+}
+
+.text22 ul li {
+    font-size: 1.3rem;
+}
+
+.about_bg .about_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#about_content_top {
+    margin-top: 150px;
+
+}
+
+.about_bg .about_content .img_text_about {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+.about_bg .about_content .img_text_about #img {
+    box-shadow: 3px 2px 10px 0.2px rgba(0, 0, 0, 0.586);
+    border-radius: 10px;
+    height: 600px;
+    width: 600px;
+}
+
+.about_bg .about_content .img_text_about #img img {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about_bg .about_content .img_text_about #img:hover {
+    box-shadow: 5px 3px 10px 0.2px black;
+}
+
+.about_bg .about_content .img_text_about #text {
+    padding-left: 30px;
+    text-align: start;
+}
+
+.about_bg .about_content .img_text_about #text h3 {
+    text-align: start;
+}
+
+.about_bg .about_content .img_text_about #text p {
+    font-size: 1.2rem;
+}
+
+
+.about_card {
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    /* Four columns with equal width */
+}
+
+.about_card div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.432);
+    transition: linear 0.2s;
+}
+
+.about_card div span {
+    font-size: 4rem;
+    margin-bottom: -20px;
+}
+
+.about_card div:hover {
+    scale: 1.001;
+    box-shadow: 0px 0px 15px 0.5px rgba(0, 0, 0, 0.619);
+}
+
+.about_card div h3 {
+    font-size: 2rem;
+    color: black;
+}
+
+.about_card div p {
+    font-size: 1.2rem;
+    color: rgb(26, 26, 26);
+}
+
+
+/*  */
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 50px;
+    width: 100%;
+    height: 320px;
+    /* display: flex;
+     background-image: url('../../public/assets/images/b.jpeg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     overflow: hidden; */
+    position: absolute;
+}
+
+
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 15px 0.1px rgba(0, 0, 0, 0.234);
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: -250px;
+    width: 300px;
+    height: 200px;
+}
+
+.grid-item:hover {
+    background-color: rgb(242, 212, 212);
+    scale: 1.03;
+}
+
+.grid-item p {
+    margin: 5px 0;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.grid-item span {
+    font-size: 3rem;
+    color: red;
+}
+
+/*  */
+
+
+/* blog */
+
+.blog_header {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../public/assets/images/giving-blood-blood.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#blog_header_bg div:hover {
+    background-color: #000000c6;
+}
+
+#blog_header_bg div {
+    background-color: #000000d5;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blog_header .title_blog_h h2 {
+    font-size: 4rem;
+    padding-bottom: 50px;
+}
+
+.blog_header .title_blog_h h3 {
+    font-size: 3rem;
+    padding-bottom: 40px;
+}
+
+.blog_header .title_blog_h p {
+    font-size: 2rem;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.blog-container {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-container .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.blog-container .blog-cards .blog-card {
+    width: 400px;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.419);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-container .blog-cards .blog-card img {
+    width: 400px;
+    border-radius: 10px 10px 0px 0px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.blog-container .blog-cards .blog-card .blog_texts {
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+
+
+.blog_img_slide {
+    width: 100%;
+    height: 300px;
+    padding: 30px;
+    z-index: 99;
+}
+
+.blog_img_slide img {
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0.1px black;
+    border-radius: 10px;
+}
+.blog_img_slide .slider-caption {
+    text-align: center;
+}

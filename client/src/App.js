@@ -16,11 +16,42 @@ import DonarList from "./pages/Admin/DonarList";
 import HospitalList from "./pages/Admin/HospitalList";
 import OrgList from "./pages/Admin/OrgList";
 import AdminHome from "./pages/Admin/AdminHome";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+
+
+
 function App() {
   return (
     <>
+      
       <ToastContainer />
       <Routes>
+        <Route
+          path="/"
+          element={
+            <PublicRoute>
+              <Home />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PublicRoute>
+              <About/>
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <PublicRoute>
+              <Blog/>
+            </PublicRoute>
+          }
+        />
         <Route
           path="/admin"
           element={
@@ -103,11 +134,11 @@ function App() {
           }
         />
         <Route
-          path="/"
+          path="/HomePage"
           element={
             <ProtectedRoute>
               <HomePage />
-            </ProtectedRoute>
+            </ProtectedRoute> 
           }
         />
         <Route
@@ -118,16 +149,18 @@ function App() {
             </PublicRoute>
           }
         />
+        
         <Route
           path="/register"
           element={
             <PublicRoute>
               <Register />
-            </PublicRoute>
+             </PublicRoute>
           }
         />
       </Routes>
     </>
+
   );
 }
 

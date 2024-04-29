@@ -10,7 +10,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     alert("Logout Successfully");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -18,7 +18,11 @@ const Header = () => {
       <nav className="navbar">
         <div className="container-fluid ">
           <div className="navbar-brand h1 ">
-            <BiDonateBlood color="red" /> Blood Bank App
+            {/* <BiDonateBlood color="red" /> */}
+            <Link to="/" className="nav-link">
+                    Donate Blood 🩸
+            </Link>
+
           </div>
           <ul className="navbar-nav flex-row">
             <li className="nav-item mx-3">
@@ -29,7 +33,7 @@ const Header = () => {
                 <span className="badge bg-secondary">{user?.role}</span>
               </p>
             </li>
-            {location.pathname === "/" ||
+            {location.pathname === "/HomePage" ||
             location.pathname === "/donar" ||
             location.pathname === "/hospital" ? (
               <li className="nav-item mx-3">
@@ -39,7 +43,7 @@ const Header = () => {
               </li>
             ) : (
               <li className="nav-item mx-3">
-                <Link to="/" className="nav-link">
+                  <Link to="/HomePage" className="nav-link">
                   Home
                 </Link>
               </li>

@@ -206,13 +206,16 @@ const Form = ({ formType, submitBtn, formTitle }) => {
           ) : (
             <p>
               ALready Usser Please
-              <Link to="/login"> Login !</Link>
+                <Link to="/login"> Login !</Link>
             </p>
           )}
           <button className="btn btn-primary" type="submit">
             {submitBtn}
           </button>
         </div>
+          <br />
+        <Link to="/"> Not now i will try Latter !</Link>
+
       </form>
     </div>
   );
