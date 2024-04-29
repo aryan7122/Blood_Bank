@@ -13,21 +13,20 @@ const Form = ({ formType, submitBtn, formTitle }) => {
   const [website, setWebsite] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
-  const [age, setAge] = useState("");
-  // const [roles, setRoles] = useState("donar");
+  const [age, setAge] = useState();
+  const [gender, setGender] = useState("");
   // const [ages, setAges] = useState("");
 
   const handleChange = (e) => {
-    setRole(e.target.value);
+    setGender(e.target.value);
     // Reset age on role change
-    setAge("");
+    setAge(null);
   }
 
   const handleSubmit = () => {
     // Check if role is Male and age is less than 18 or Female and age is less than 21
-    if ((role === "donar" && age < 18) || (role === "donar" && age < 21)) {
+    if ((gender === "Male" && age < 18) || (gender === "Female" && age < 21)) {
       alert("Age must be at least 18 for Male and at least 21 for Female.");
-    } else {
     }
   }
   return (
@@ -216,9 +215,9 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                         <input
                           type="radio"
                           className="form-check-input"
-                          name="sex"
+                          name="gender"
                           id="femaleRadio"
-                          value="donar"
+                          value="gender"
                           onChange={handleChange}
                           defaultChecked={role === "donar"}
                         />
@@ -230,9 +229,9 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                         <input
                           type="radio"
                           className="form-check-input"
-                          name="sex"
+                          name="gender"
                           id="maleRadio"
-                          value="donar"
+                          value="gender"
                           onChange={handleChange}
                           defaultChecked={role === "donar"}
                         />
